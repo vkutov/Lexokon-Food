@@ -1,4 +1,3 @@
-import "../styles/Home.css";
 import { useEffect, useState,useContext } from 'react';
 import FoodCard from "./FoodCard";
 import { sortByBestBefore,getSupply } from "../services/api";
