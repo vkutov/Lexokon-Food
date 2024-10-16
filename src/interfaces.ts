@@ -4,12 +4,12 @@ export interface IFood {
   best_before_date: string;
   quantity: string;
   energy: string;
+  image: string;
 }
-
-export interface IFoodContext {
  
+export interface IFoodContext {
   food: IFood[];
-
+  setFood: (food: IFood[]) => void;
 }
 
 

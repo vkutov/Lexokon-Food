@@ -1,5 +1,6 @@
 // import { faTrashRestore } from "@fortawesome/free-solid-svg-icons";
 // import {  } from "././api";
+
 const url = "././api/foods_data.json";
 export const getSupply = async () => {
     try {

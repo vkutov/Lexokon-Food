@@ -1,17 +1,17 @@
-import { ReactElement, useState,useContext } from "react";
-
-import { FoodCard } from "../components/FoodCard";
+import { useContext } from 'react';
+import FoodCard from "../components/FoodCard";
 import { FoodContext } from "../context/FoodProvider";
-
-
-export default function MovieListPage(): ReactElement {
-  const {food} = useContext(FoodContext);
-
+ 
+const ListSupply = () => {
+  const { food } = useContext(FoodContext);
+  console.log(food);
+ 
   return (
-    <section >
-      {/* {food.map((f) => (
-        <FoodCard key={f.best_before_date} movie={f} />
-      ))} */}
-    </section>
+    <>
+      {food.map((foodObj, i) => <FoodCard key={i} food={foodObj} />)}
+    </>
   );
-}
+};
+ 
+export default ListSupply;
+  
