@@ -2,32 +2,32 @@ import { useContext, useState, useEffect } from 'react';
 import FoodCard from "../components/FoodCard";
 import { IFood } from "../interfaces";
 import { FoodContext } from "../context/FoodProvider";
-import { getMissing } from "../services/api";
+import { getExpiring } from "../services/api";
  
-const MissingSupply = () => {
+const ExpiringSupply = () => {
   const { food } = useContext(FoodContext);
-  const [missing, setMissing] = useState<IFood[]>([]);
+  const [best, setBest] = useState<IFood[]>([]);
  
   useEffect(() => {
-    const fetcMissingFood = async () => {
+    const fetchBesforeFood = async () => {
       try {
-        const missing = getMissing(food); 
+        const expiring = getExpiring(food); 
         // Uppdatera state med det filtrerade resultatet
-        setMissing(missing);
+        setBest(expiring);
       } catch (error) {
         console.error('Error fetching the food supply:', error);
       }
     };
  
     // Kör den asynkrona funktionen
-    fetcMissingFood();
-  }, [food]); 
+    fetchBesforeFood();
+  }, [food]); // useEffect beroende av food
   return (
     <>
-      {missing.map((missingObj, i) => <FoodCard key={i} food={missingObj} />)}
+      {best.map((bestObj, i) => <FoodCard key={i} food={bestObj} />)}
     </>
   );
 };
  
-export default MissingSupply;
+export default ExpiringSupply;
   

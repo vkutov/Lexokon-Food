@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 export function Home() {
   return (
     <main className="home-main">
-      <FoodCard />  
+      <FoodCard />   
     </main>
   );
 }
