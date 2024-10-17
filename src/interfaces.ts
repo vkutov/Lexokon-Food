@@ -10,6 +10,8 @@ export interface IFood {
 export interface IFoodContext {
   food: IFood[];
   setFood: (food: IFood[]) => void;
+  best?: IFood[];
+  setBest?: (food: IFood[]) => void;
 }
 
 
