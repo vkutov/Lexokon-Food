@@ -7,11 +7,18 @@ interface IFoodProviderProps {
 }
  
 export const FoodContext = createContext<IFoodContext>({} as IFoodContext);
- 
+  
+
 export function FoodProvider({ children }: IFoodProviderProps): any {
   const [food, setFood] = useState<IFood[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
+  const addFood = (supply: IFood) => {
+      setFood([supply, ...food]);
+    };
 
+    const removeFood = (movie: IFood): void => {
+      // setFood(food.filter((f) => f !== food.id));
+    };
   const fetchFood = async () => {
     const url = "././api/foods_data.json";
  
@@ -38,5 +45,5 @@ export function FoodProvider({ children }: IFoodProviderProps): any {
   //   food
   // };
  
-  return <FoodContext.Provider value={{food, setFood}}>{children}</FoodContext.Provider>;
+  return <FoodContext.Provider value={{food, setFood, addFood, removeFood}}>{children}</FoodContext.Provider>;
 }

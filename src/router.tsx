@@ -4,6 +4,8 @@ import { Home } from "./pages/Home";
 import FoodList from "./pages/FoodList";
 import Missing from "./pages/Missing";
 import Expiring from "./pages/Expiring";
+import Add from "./pages/Add";
+
 
 
 export const router = createBrowserRouter([
@@ -27,6 +29,10 @@ export const router = createBrowserRouter([
       {
         path: "/missing",
         element: <Missing />,
+      },
+      {
+        path: "/add",
+        element: <Add />,
       },
      ],
    },

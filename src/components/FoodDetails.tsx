@@ -1,66 +1,78 @@
-// import starIcon from '../assets/icons8-star-50.png';
-import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import "../styles/Navbar.css";
+// import { IFood } from "../interfaces";
+import { FormEventHandler, MouseEventHandler, useContext, useState,  } from "react";
+import { FoodContext } from "../context/FoodProvider";
+// import  AddSupply  from "../pages/Add";
+import "../styles/Navbar.css";
+ import { IFood } from "../interfaces";
+ import { useNavigate } from "react-router-dom";
 
-// api tag
-interface food {
-  idDrink: string;
-  strDrink: string;
-  strDrinkThumb: string;
+ 
+export const FoodDetails = ({ food }: { food: IFood })  => {
+  const navigate = useNavigate();
+  const [id, setId] = useState<string>("");
+  const [food_item, setFoodItem] = useState<string>("");
+  const [best_before_date, setBestforeDate] = useState<string>("");
+  const [image, setImage] = useState<string>("");
+  const [quantity, setQuantity] = useState<string>("");
+  const [energy, setEnergy] = useState<string>("");
+  const {addFood} = useContext(FoodContext);
+  const handleOnsubmit: FormEventHandler<HTMLFormElement> = (e) => {
+    e.preventDefault();
+
+    const newFood: IFood = {
+      id,
+      food_item,
+      best_before_date,
+      image,
+      quantity,
+      energy,
+    };
+
+    addFood(newFood);
+    navigate("/storage");
+    console.log(newFood);
 }
-
-const foodCard = () => {
-  const [food, setFood] = useState<food | null>(null);
-  const [loading, setLoading] = useState<boolean>(true);
-  const Navigate = useNavigate(); // direct to another page
-
-  // Function to fetch a random food
-  const fetchFood = async () => {
-    setLoading(true);
-    try {
-      const response = await fetch('https://www.thefooddb.com/api/json/v1/1/random.php');
-      const data = await response.json();
-      setFood(data.drinks[0]);
-    } catch (error) {
-      console.error('Error fetching the food:', error);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  // Fetch a food when the component mounts
-  useEffect(() => {
-    fetchFood();
-  }, []);
-
   return (
-    <section className="home-section">
-      <button className="random-btn" onClick={fetchFood}>
-        Random food
-      </button>
-      <section className="card">
-        {loading ? (
-          <div>Loading...</div>
-        ) : food ? (
+
+        <section className="card">
           <>
-            <img src={food.strDrinkThumb} alt={food.strDrink} className="img-card" />
-            <aside className="aside-card">
-
-              <h2 className="drink-name">{food.strDrink}</h2>
-              <button
-                onClick={() => Navigate(`/food/${food.idDrink}`)}
-                className="see-more-btn"
-              >
-                See more
-              </button>
-            </aside>
+            <form className="add-food" onSubmit={handleOnsubmit}>
+              <input label="title" onChange={(e) => setFoodItem(e.target.value) } type="text" value={food_item} />
+                      <input
+                              label="Best Before Date"
+                              onChange={(e) => setBestforeDate(e.target.value)}
+                              type="date"
+                              value={best_before_date}
+                            />
+                            <input
+                              label="Image"
+                              onChange={(e) => setImage(e.target.value)}
+                              type="text"
+                              value={image}
+                              placeholder="Image URL"
+                            />
+                            <input
+                              label="Quantity"
+                              onChange={(e) => setQuantity(e.target.value)}
+                              type="text"
+                              value={quantity}
+                              placeholder="Quantity"
+                            />
+                            <input
+                              label="Energy"
+                              onChange={(e) => setEnergy(e.target.value)}
+                              type="text"
+                              value={energy}
+                              placeholder="Energy (kcal)"
+                            />
+                            <button type="submit">Add Food</button>
+                  </form>             
           </>
-        ) : (
-          <div>No food found.</div>
-        )}
-      </section>
-    </section>
-  );
+        </section>
+      
+  )
 };
-
-export default foodCard;
+ 
+export default FoodDetails;
+ 

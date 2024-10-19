@@ -2,7 +2,6 @@ import "../styles/Navbar.css";
 import { useNavigate } from "react-router-dom";
 import { IFood } from "../interfaces";
  
-// import foodCard from "./FoodDetails.tsx";
  
 export const FoodCard = ({ food }: { food: IFood })  => {
   const Navigate = useNavigate();
@@ -17,7 +16,7 @@ export const FoodCard = ({ food }: { food: IFood })  => {
  
               <h2 className="drink-name">{food.best_before_date}</h2>
               <button
-                onClick={() => Navigate(`/food/${food.quantity}`)}
+                onClick={() => Navigate(`/food/${food.food_item}`)}
                 className="see-more-btn"
               >
                 {food.best_before_date}

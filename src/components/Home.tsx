@@ -8,6 +8,7 @@ const SortedSupply = () => {
   const { food } = useContext(FoodContext);
   const [best, setBest] = useState<IFood[]>([]);
  
+
   useEffect(() => {
     const fetchBestFood = async () => {
       try {
@@ -19,8 +20,7 @@ const SortedSupply = () => {
         const bestBefore = foodArr[0].best_before_date;
  
         // Filtrera matvarorna efter det första "best before"-datumet
-        let filtered = food.slice();
-        filtered = filtered.filter(supply => supply.best_before_date === bestBefore);
+        const filtered = food.filter(supply => supply.best_before_date === bestBefore);
  
         // Uppdatera state med det filtrerade resultatet
         setBest(filtered);

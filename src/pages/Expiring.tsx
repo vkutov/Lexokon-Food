@@ -9,7 +9,7 @@ const ExpiringSupply = () => {
   const [best, setBest] = useState<IFood[]>([]);
  
   useEffect(() => {
-    const fetchBesforeFood = async () => {
+    const fetchBestforeFood = async () => {
       try {
         const expiring = getExpiring(food); 
         // Uppdatera state med det filtrerade resultatet
@@ -20,7 +20,7 @@ const ExpiringSupply = () => {
     };
  
     // Kör den asynkrona funktionen
-    fetchBesforeFood();
+    fetchBestforeFood();
   }, [food]); // useEffect beroende av food
   return (
     <>
@@ -31,3 +31,6 @@ const ExpiringSupply = () => {
  
 export default ExpiringSupply;
   
+
+
+

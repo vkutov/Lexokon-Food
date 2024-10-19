@@ -1,4 +1,9 @@
 import { IFood } from './../interfaces';
+// import { FormEventHandler, MouseEventHandler, useContext, useState } from "react";
+// import { FoodContext } from "../context/FoodProvider";
+// import { useNavigate } from "react-router-dom";
+
+
 // import { faTrashRestore } from "@fortawesome/free-solid-svg-icons";
 // import {  } from "././api";
 const url = "././api/foods_data.json";
@@ -42,3 +47,25 @@ export function getMissing(food:IFood[]): IFood[] {
         return item.quantity == "0"; // The supply is out of stock 
    });
 }
+export function sortByIndex(food: any): any {
+ if (food.length === 0) return -1; // Handle empty array
+
+    let largestIndex = 0; // Start with the first element
+
+    for (let i = 0; i < food.length; i++) {
+        if (food[i] > food[largestIndex]) {
+            largestIndex = i;
+        }
+    }
+    console.log(food.length);
+    return largestIndex;
+}
+//   const handleOnClearClick: MouseEventHandler<HTMLButtonElement> = () => {
+//     setId("");
+//     setFoofItem("");
+//     setBestfoteDate("");
+//     setImage("");
+//     setQauntity("");
+//     setEnergy("");
+//   };
+ 
