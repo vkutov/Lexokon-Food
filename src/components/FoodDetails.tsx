@@ -67,7 +67,7 @@ export const FoodDetails = ({ food }: { food: IFood })  => {
                               placeholder="Energy (kcal)"
                             />
                             <button type="submit">Add Food</button>
-                  </form>             
+             </form>             
           </>
         </section>
       

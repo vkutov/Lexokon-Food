@@ -1,11 +1,9 @@
-// import "../styles/Home.css";
 import FoodCard from "../components/Home";
-import Footer from "../components/Footer";
-
 export function Home() {
   return (
-    <main className="home-main">
+    <>
+      <h2 className="oldest">Oldest</h2>
       <FoodCard />   
-    </main>
+    </>
   );
 }

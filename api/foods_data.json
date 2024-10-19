@@ -3,7 +3,7 @@
         "id":0,
         "food_item": "Apple Juice",
         "best_before_date": "2024-11-20",
-        "image": "Apple Juice Concentrate, Water",
+        "image": "../img/beans.jpg",
         "quantity": "1 liter",
         "energy": "45 kcal per 100 ml"
     },
@@ -11,8 +11,8 @@
         "id":1,
         "food_item": "Whole Grain Bread",
         "best_before_date": "2024-10-15",
-        "image": "Whole Grain Wheat, Water, Yeast, Salt",
-        "quantity": "0",
+        "image": "../img/whiskey.png",
+        "quantity": "1",
         "energy": "250 kcal per 100 g"
     },
 
@@ -20,7 +20,7 @@
         "id":2,
         "food_item": "Greek Yogurt",
         "best_before_date": "2024-10-30",
-        "image": "Milk, Live Cultures",
+        "image": "../img/can.png",
         "quantity": "150 g",
         "energy": "100 kcal per 100 g"
     },
@@ -28,8 +28,8 @@
         "id":3,
         "food_item": "Peanut Butter",
         "best_before_date": "2025-05-12",
-        "image": "Peanuts, Salt",
-        "quantity": "500 g",
+        "image": "../img/whiskey.png",
+        "quantity": "0",
         "energy": "600 kcal per 100 g"
     }
 ]

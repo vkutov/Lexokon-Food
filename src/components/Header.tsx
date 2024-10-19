@@ -33,7 +33,7 @@ export default function Header() {
     return (
         <>
           <h1>{zone}</h1>
-          <img src={logo} alt="food" />
+          <img src={logo} alt="food"   className="logo" />
         </>
     )
 
