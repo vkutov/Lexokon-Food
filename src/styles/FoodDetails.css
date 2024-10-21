@@ -14,30 +14,28 @@
 }
 
 .card-info {
-    height: 30rem;
+    height: 50rem;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1rem;
+    gap: 0.5rem;
 }
 
 
 .card-info input {
-    font-size: xx-large;
+    font-size: 1.5rem;
     width: 80%;
     align-self: center;
     border-radius: 5px;
 }
 
-/* .img-details {
-    padding-top: 0.5rem;
+.img-details {
+    padding-top: 0.25rem;
     width: 10%;
-    aspect-ratio: 1 / 2;
-    object-fit: contain;
-    align-self: center;
+    aspect-ratio: 2 / 3;
     border-radius: 25px;
-} */
+}
 
 
 form img {
@@ -45,16 +43,13 @@ form img {
     /* Ensures the image behaves as a block-level element */
     max-width: 100%;
     /* Restricts the image width to the form's width */
-    height: auto;
+    height: 10rem;
     /* Maintains the image's aspect ratio */
     margin: 10px auto;
     /* Adds margin to center the image horizontally and space it vertically */
-    border: 1px solid #ccc;
-    /* Optional: Adds a border around the image */
     border-radius: 5px;
     /* Optional: Adds rounded corners */
-    padding: 5px;
-    /* Adds space between the image and its border */
+
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     /* Optional: Adds a light shadow */
-} 
+}
