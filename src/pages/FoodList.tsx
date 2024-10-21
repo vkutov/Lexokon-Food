@@ -8,7 +8,9 @@ const ListSupply = () => {
  
   return (
     <>
+      <main className='food-container'>
       {food.map((foodObj, i) => <FoodCard key={i} food={foodObj} />)}
+      </main>
     </>
   );
 };

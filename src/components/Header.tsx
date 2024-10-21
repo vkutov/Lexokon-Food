@@ -3,6 +3,9 @@ import logo from "../assets/food.png";
 export default function Header() {
     const location = useLocation(); //  the current route location
     let zone ="";
+    if(location.pathname.search("foodDetails") !=-1){
+      location.pathname = "foodDetails";
+    }
     switch(location.pathname){
          case "/":
              zone = "Prepared.";
@@ -22,7 +25,10 @@ export default function Header() {
           case "/add":
              zone = "Add.Supply.";
             break;
-             case "/remove":
+         case "foodDetails":
+             zone = "Food.Details.";
+            break;             
+          case "/remove":
             zone = "Remove.Supply.";
             break;
          default:
@@ -38,3 +44,5 @@ export default function Header() {
     )
 
 }
+
+

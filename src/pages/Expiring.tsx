@@ -24,7 +24,9 @@ const ExpiringSupply = () => {
   }, [food]); // useEffect beroende av food
   return (
     <>
-      {best.map((bestObj, i) => <FoodCard key={i} food={bestObj} />)}
+      <main className='food-container'>
+         {best.map((bestObj, i) => <FoodCard key={i} food={bestObj} />)}
+      </main>
     </>
   );
 };

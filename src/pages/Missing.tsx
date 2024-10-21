@@ -24,7 +24,9 @@ const MissingSupply = () => {
   }, [food]); 
   return (
     <>
-      {missing.map((missingObj, i) => <FoodCard key={i} food={missingObj} />)}
+     <main className='food-container'>
+       {missing.map((missingObj, i) => <FoodCard key={i} food={missingObj} />)}
+     </main>
     </>
   );
 };

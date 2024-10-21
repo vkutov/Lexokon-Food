@@ -7,6 +7,7 @@
         "quantity": "1 liter",
         "energy": "45 kcal per 100 ml"
     },
+    
     {
         "id":1,
         "food_item": "Whole Grain Bread",
@@ -24,6 +25,7 @@
         "quantity": "150 g",
         "energy": "100 kcal per 100 g"
     },
+
     {
         "id":3,
         "food_item": "Peanut Butter",
