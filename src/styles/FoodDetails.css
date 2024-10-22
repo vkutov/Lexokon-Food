@@ -58,35 +58,32 @@
 
 .img-delete {
     margin-top: 1.25rem;
-    width: 10%;
+    width: 15%;
     margin: bottom 2.25remem;
 }
 
-@media (max-width:800px) {
-    @media (max-width:800px) {
-        .card-details {
-            padding: 0.5rem;
-            height: 50%;
-            width: 80%;
-            flex-direction: column;
-        }
+@media (max-width:900px) {
 
-        .img-details,
-        .img-delete {
-            width: 25%;
-        }
+    .card-details {
+        padding: 0.5rem;
+        height: 50%;
+        width: 80%;
+        flex-direction: column;
+    }
 
-
+    .img-details,
+    .img-delete {
+        width: 25%;
+    }
 
 
-        /* button {
+
+
+    /* button {
             background-color: #f9f9f9;
         } */
 
 
-
-
-    }
 
 
 }
