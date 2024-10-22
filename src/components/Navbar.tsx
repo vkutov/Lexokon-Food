@@ -22,9 +22,7 @@ const Navbar: React.FC = () => {
               <Link to="/add" className="navbar-brand">
                 ADD SUPPLY
             </Link>
-              <Link to="/remove" className="navbar-brand">
-                REMOVE SUPPLY
-            </Link>
+
     </nav>
     );
     

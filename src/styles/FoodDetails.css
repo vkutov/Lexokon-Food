@@ -61,3 +61,32 @@
     width: 10%;
     margin: bottom 2.25remem;
 }
+
+@media (max-width:800px) {
+    @media (max-width:800px) {
+        .card-details {
+            padding: 0.5rem;
+            height: 50%;
+            width: 80%;
+            flex-direction: column;
+        }
+
+        .img-details,
+        .img-delete {
+            width: 25%;
+        }
+
+
+
+
+        /* button {
+            background-color: #f9f9f9;
+        } */
+
+
+
+
+    }
+
+
+}

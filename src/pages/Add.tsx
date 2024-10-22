@@ -49,9 +49,3 @@ const AddFood = () => {
 }
 export default AddFood;
 
-
- {/* <form className="add-movie" onSubmit={handleOnsubmit}>
-           <input label="title" onChange={(e) => setFoodItem(e.target.value)
-            (e.target.value)} type="text" value={food_item} />
-           <input value="add" type="submit" />      
-        </form> */}

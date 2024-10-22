@@ -87,10 +87,20 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
+@media (max-width:800px) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+
+    /* font-size: smaller; */
+    h1 {
+      font-size: 175%;
+    }
+
+    h2,
+    h3 {
+      font-size: 100%;
+
+    }
+
   }
 
   a:hover {
@@ -98,6 +108,6 @@ button:focus-visible {
   }
 
   button {
-    background-color: #f9f9f9;
+    font-size: 80%;
   }
 }
