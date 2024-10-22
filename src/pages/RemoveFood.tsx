@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import FoodDetails from '../components/FoodDetails';
 import { IFood } from "../interfaces";
 
-const SupplyDetails = () => {
+const RemoveFood = () => {
   const { food } = useContext(FoodContext); // Get food data from context
   const { id } = useParams(); // Get id from route params
   const [detailed, setDetailed] = useState<IFood | null>(null); // Changed to IFood | null
@@ -47,4 +47,4 @@ const SupplyDetails = () => {
   );
 };
 
-export default SupplyDetails;
+export default RemoveFood;

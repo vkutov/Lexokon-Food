@@ -6,6 +6,9 @@ import Missing from "./pages/Missing";
 import Expiring from "./pages/Expiring";
 import Add from "./pages/Add";
 import FoodDetails from "./pages/FoodDetails.tsx";
+import RemoveFood  from "./pages/RemoveFood.tsx";
+import { NotFound } from "./pages/NotFound.tsx";
+
 
 
 
@@ -39,7 +42,16 @@ export const router = createBrowserRouter([
         path: "/foodDetails/:id",
         element: <FoodDetails />,
       },
-
+      {
+        path: "*",
+        element: <NotFound />,
+      },
+     {
+        path: "/remove/:id",
+        element: <RemoveFood />,
+      },
+   
      ],
+ 
    },
 ]);

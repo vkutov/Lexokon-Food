@@ -6,7 +6,7 @@
 }
 
 .oldest {
-    margin-left: 3rem;
+    margin-bottom: 1rem;
     align-self: center;
 }
 
@@ -59,7 +59,6 @@
 .img-card {
     padding-top: 0.5rem;
     flex: 1;
-    width: 50%;
     aspect-ratio: 1 / 2;
     object-fit: cover;
     object-position: center;
@@ -72,4 +71,8 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+}
+
+.img-details {
+    width: 10%;
 }

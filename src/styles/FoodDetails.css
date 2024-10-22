@@ -2,7 +2,7 @@
     box-shadow: rgba(0, 0, 0, 0.25) 5px 14px 28px,
         rgba(0, 0, 0, 0.22) 0px 10px 10px;
     width: 50vw;
-    height: 30rem;
+    height: 5%;
     background-color: rgb(118, 122, 122);
     opacity: 0.5;
     border-radius: 2px;
@@ -14,7 +14,7 @@
 }
 
 .card-info {
-    height: 50rem;
+    height: 40rem;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -30,15 +30,17 @@
     border-radius: 5px;
 }
 
-.img-details {
+
+
+.img-card {
     padding-top: 0.25rem;
-    width: 10%;
+    width: 40%;
     aspect-ratio: 2 / 3;
     border-radius: 25px;
 }
 
 
-form img {
+.img-details {
     display: block;
     /* Ensures the image behaves as a block-level element */
     max-width: 100%;
@@ -49,7 +51,12 @@ form img {
     /* Adds margin to center the image horizontally and space it vertically */
     border-radius: 5px;
     /* Optional: Adds rounded corners */
-
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     /* Optional: Adds a light shadow */
+}
+
+.img-delete {
+    margin-top: 1.25rem;
+    width: 10%;
+    margin: bottom 2.25remem;
 }

@@ -3,7 +3,7 @@ import { FormEventHandler, useContext, useEffect, useState } from "react";
 import { FoodContext } from "../context/FoodProvider";
 import "../styles/Navbar.css";
 import { IFood } from "../interfaces";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 export const FoodDetails = ({ food }: { food: IFood }) => {
   const navigate = useNavigate();
@@ -12,6 +12,7 @@ export const FoodDetails = ({ food }: { food: IFood }) => {
   // State variables
   const [id, setId] = useState<string>(food.id);
   const [action, setAction] = useState<string>("Add food");
+  const [erase, setErase] = useState<null | string>(null);
   const [food_item, setFoodItem] = useState<string>(food.food_item);
   const [best_before_date, setBestforeDate] = useState<string>(food.best_before_date);
   const [image, setImage] = useState<string>(food.image);
@@ -22,6 +23,12 @@ export const FoodDetails = ({ food }: { food: IFood }) => {
   useEffect(() => {
     if (food.food_item !== "") {
       setAction("Update food");
+    } else {
+      setAction("Add food");
+    }
+    if (food.image== "") {
+      setImage("../../img/supply.png");
+      setErase("true");
     } else {
       setAction("Add food");
     }
@@ -47,6 +54,11 @@ export const FoodDetails = ({ food }: { food: IFood }) => {
   return (
     <article className="card-details">
       <form className="card-info" onSubmit={handleOnSubmit}>
+      {!erase && (
+         <Link to={`/remove/${food.id}`}>
+            <img src="/src/assets/delete.png" alt="Delete food item" className="img-delete" />
+        </Link>
+       )}
         <img src={image}  alt={food_item}  className="img-details"/>
         <input  
           onChange={(e) => setFoodItem(e.target.value)} 
