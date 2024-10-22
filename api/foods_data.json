@@ -1,6 +1,6 @@
 [
     {
-        "id":4,
+        "id":0,
         "food_item": "Apple Juice",
         "best_before_date": "2024-11-20",
         "image": "../img/beans.jpg",
@@ -18,7 +18,7 @@
     },
 
     {
-        "id":2,
+        "id":5,
         "food_item": "Greek Yogurt",
         "best_before_date": "2024-10-30",
         "image": "../img/can.png",

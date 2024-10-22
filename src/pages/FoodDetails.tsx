@@ -48,3 +48,6 @@ const SupplyDetails = () => {
 };
 
 export default SupplyDetails;
+
+
+

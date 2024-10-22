@@ -21,7 +21,7 @@ const AddFood = () => {
       try {
         let foodArr: { id: string }[] = Object.values(food);
         const max = sortByIndex(foodArr) + 1; // Get the max id and increment
-        setId(max.toString()); // Convert to string since your id is set as string
+        setId(max); // Convert to string since your id is set as string
       } catch (error) {
         console.error("Error fetching data:", error);
       }

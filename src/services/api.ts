@@ -47,25 +47,18 @@ export function getMissing(food:IFood[]): IFood[] {
         return item.quantity == "0"; // The supply is out of stock 
    });
 }
+
 export function sortByIndex(food: any): any {
- if (food.length === 0) return -1; // Handle empty array
+    if (food.length === 0) return -1; // Handle empty array
 
     let largestIndex = 0; // Start with the first element
 
-    for (let i = 0; i < food.length; i++) {
-        if (food[i] > food[largestIndex]) {
-            largestIndex = i;
+    for (let i = 1; i < food.length; i++) { // Start from the second element
+        if (food[i]["id"] > food[largestIndex]["id"]) {
+            largestIndex = i; // Update with the index, not the "id" value
         }
     }
-    console.log(food.length);
-    return largestIndex;
+
+    const result = food[largestIndex]["id"];
+    return result;
 }
-//   const handleOnClearClick: MouseEventHandler<HTMLButtonElement> = () => {
-//     setId("");
-//     setFoofItem("");
-//     setBestfoteDate("");
-//     setImage("");
-//     setQauntity("");
-//     setEnergy("");
-//   };
- 
