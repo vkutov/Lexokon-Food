@@ -24,6 +24,7 @@ a {
 }
 
 .item1 {
+  padding-left: 10%;
   grid-column: 1 / span 3;
   /* Places in the first column */
 }
@@ -120,6 +121,10 @@ button:focus-visible {
   }
 
   .item1 {
-    margin-left: 45%;
+    margin-left: 25%;
+  }
+
+  .card {
+    width: 50%;
   }
 }

@@ -51,7 +51,7 @@
     justify-content: center;
 }
 
-@media (max-width:800px) {
+@media (max-width:962px) {
     .navbar {
         padding: 0.5rem;
         height: 10%;
