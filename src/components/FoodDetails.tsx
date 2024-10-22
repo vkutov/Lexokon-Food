@@ -50,7 +50,7 @@ export const FoodDetails = ({ food }: { food: IFood }) => {
     };
 
     addFood(newFood);
-    navigate("/storage");
+    navigate("/");
     console.log(newFood);
   };
 
