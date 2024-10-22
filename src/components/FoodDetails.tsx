@@ -21,10 +21,11 @@ export const FoodDetails = ({ food }: { food: IFood }) => {
 
   // useEffect to set action based on whether we are updating or adding
   useEffect(() => {
-    if (food.food_item !== "") {
-      setAction("Update food");
+    if (food.id !== "") {
+        setAction("Add food");
+
     } else {
-      setAction("Add food");
+          setAction("Update food");
     }
     if (food.image== "") {
       setImage("../../img/supply.png");
@@ -32,7 +33,7 @@ export const FoodDetails = ({ food }: { food: IFood }) => {
     } else {
       setAction("Add food");
     }
-  }, [food.food_item]);
+  }, [food.id]);
 
   const handleOnSubmit: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();

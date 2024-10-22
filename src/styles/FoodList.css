@@ -20,6 +20,7 @@
     display: flex;
     border-radius: 25px 25px 25px 25px;
     margin-top: 1rem;
+    padding-inline: 0.5rem;
     /* margin-right: 5 rem; */
 }
 

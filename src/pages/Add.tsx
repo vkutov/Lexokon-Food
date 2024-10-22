@@ -13,7 +13,7 @@ const AddFood = () => {
   const [quantity, setQuantity] = useState<string>("");
   const [energy, setEnergy] = useState<string>("");
 
-  const { addFood, food } = useContext(FoodContext); // Moved out of useEffect
+  const { addFood, food } = useContext(FoodContext); 
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -39,10 +39,7 @@ const AddFood = () => {
       energy,
     };
 
-    // Call addFood from the context
-    // addFood(addFoodObj);
-    // navigate("/storage"); // Navigate to some other page after adding food
-  
+
   return (
     <>         
       <FoodDetails food={addFoodObj} />

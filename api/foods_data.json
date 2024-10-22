@@ -1,13 +1,13 @@
 [
     {
-        "id":0,
+        "id":4,
         "food_item": "Apple Juice",
         "best_before_date": "2024-11-20",
         "image": "../img/beans.jpg",
         "quantity": "1 liter",
         "energy": "45 kcal per 100 ml"
     },
-    
+
     {
         "id":1,
         "food_item": "Whole Grain Bread",
